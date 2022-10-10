@@ -37,7 +37,7 @@ This is a hometask for a simple phonebook CRUD
 It was my first time using Docker, Graphql/Apollo, Prisma and MaterialUI.
 Also it i had problems with Types at first and need to learn more about Types with ReactJS/NextJS.
 
-I used Primsa because it is easier to work with in teams, and creates a schema file from my Graphql files and uploads them as tables to my Database.
+I used Primsa because it is easier to work with in teams, and it creates a schema file from my Graphql files, and uploads them as tables to my Database.
 
 I used PostgreSQL because i am used to MySQL Databases, but PostgreSQL is more effecient and advanced.
 

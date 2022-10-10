@@ -57,7 +57,7 @@ const Contacts = ({ onDelete, openModal }: any) => {
 		return 'loading'
 	}
 	if(error){
-		return 'error'
+		return error.message
 	}
 	return data.contacts.map((contactData: Props) => (
 	<Contact {...contactData} key={contactData.id} onDelete={onDelete} openModal={openModal} />

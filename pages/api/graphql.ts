@@ -2,9 +2,6 @@ import { gql, ApolloServer } from 'apollo-server-micro'
 import { PrismaClient } from '@prisma/client'
 
 interface Props{
-	_parent: any
-	_args: object
-	_context: any
 	id: string
 	firstName: string
 	lastName: string
@@ -32,18 +29,18 @@ const typeDefs = gql`
 
 const resolvers = {
 	Query: {
-		contacts: (_parent, _args, _context) => {
+		contacts: (_parent: string, _args: [], _context: string) => {
 			return prisma.contact.findMany()
 		},
 	},
 	Mutation: {
-		addContact: (_parent, {firstName, lastName, phoneNumber}, _context) => {
+		addContact: (_parent: string, {firstName, lastName, phoneNumber}: Props, _context: string) => {
 			return prisma.contact.create({data: {firstName, lastName, phoneNumber}})
 		},
-		editContact: (_parent, {id, firstName, lastName, phoneNumber}, _context) => {
+		editContact: (_parent: string, {id, firstName, lastName, phoneNumber}: Props, _context: string) => {
 			return prisma.contact.update({where: {id}, data: {firstName, lastName, phoneNumber}})
 		},
-		deleteContact: (_parent, {id}, _context) => {
+		deleteContact: (_parent: string, {id}: Props, _context: string) => {
 			return prisma.contact.delete({where: {id}})
 		},
 	},

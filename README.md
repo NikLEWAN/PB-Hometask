@@ -34,9 +34,6 @@ This is a hometask for a simple phonebook CRUD
    ```
 
 ## Comments
-It was my first time using Docker, Graphql/Apollo, Prisma and MaterialUI.
-Also i had problems with Types at first and need to learn more about Types with ReactJS/NextJS.
-
 I used Prisma because it is easier to work with in teams, and it creates a schema file from my Graphql files, and uploads them as tables to my Database.
 
 I used PostgreSQL because i am used to MySQL Databases, but PostgreSQL is more effecient and advanced.
